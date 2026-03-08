@@ -1,0 +1,8 @@
+﻿{"question":"幂等设计在大厂后端里是硬约束还是软建议？","answer":"硬约束。关键路径（支付、下单、回调）必须幂等。方案：业务唯一键+状态机合法迁移+唯一索引+重试可重入。","topic":"backend","difficulty":"medium","type":"knowledge"}
+{"question":"REST、RPC、消息队列各自适用边界是什么？","answer":"REST 适合开放接口与资源语义；RPC 适合内部低延迟调用；MQ 适合削峰异步与最终一致。要求候选人按时延/一致性/耦合度对比。","topic":"backend","difficulty":"medium","type":"theory"}
+{"question":"如何设计高并发接口的超时与重试策略？","answer":"要有总超时预算、分层超时、指数退避+jitter；仅对幂等请求重试，避免重试风暴。追问：上下游超时应如何对齐。","topic":"backend","difficulty":"hard","type":"knowledge"}
+{"question":"缓存雪崩、击穿、穿透三者区别与防护。","answer":"雪崩是大量 key 同时失效；击穿是热点 key 失效；穿透是查不存在 key。组合防护：TTL 打散、单飞互斥、布隆+空值缓存、限流降级。","topic":"backend","difficulty":"medium","type":"theory"}
+{"question":"消息队列消费语义 at-least-once 下如何保证正确性？","answer":"核心是消费端幂等，不追求伪 exactly-once。要说明去重键、状态机、重放补偿、死信处理。","topic":"backend","difficulty":"hard","type":"knowledge"}
+{"question":"零停机发布需要哪些前置条件？","answer":"无状态实例、连接优雅摘除、数据向前兼容、回滚路径、灰度观测。追问：数据库 schema 变更如何双向兼容。","topic":"backend","difficulty":"hard","type":"theory"}
+{"question":"网关层限流和业务层限流如何协同？","answer":"网关做粗粒度保护，业务层做细粒度配额（用户/租户/资源）。必须说明误伤控制、白名单、降级策略。","topic":"backend","difficulty":"medium","type":"knowledge"}
+{"question":"可观测性为什么不是上了监控就行？","answer":"要打通 Metrics、Logs、Traces 和统一 trace_id。并定义告警可行动性：触发后谁在多长时间内做什么。","topic":"backend","difficulty":"medium","type":"knowledge"}

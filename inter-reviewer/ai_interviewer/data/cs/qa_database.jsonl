@@ -1,0 +1,7 @@
+﻿{"question":"ACID 在互联网业务里如何落地而不是背定义？","answer":"应结合业务动作解释：下单扣款要原子性；一致性由约束和业务规则共同保证；隔离级别按并发风险选；持久性依赖 WAL/复制。","topic":"database","difficulty":"easy","type":"theory"}
+{"question":"MySQL 索引优化中最常见的误区是什么？","answer":"只看是否建了索引，不看选择性与回表成本。面试应要求候选人解释执行计划中的 rows/type/extra。","topic":"database","difficulty":"medium","type":"knowledge"}
+{"question":"主从延迟导致读旧数据时如何治理？","answer":"关键路径读主、会话粘滞读、延迟探针路由、业务容忍最终一致。要求候选人能按场景分级。","topic":"database","difficulty":"hard","type":"theory"}
+{"question":"分库分表后最痛的三个问题是什么？","answer":"跨分片事务、跨分片聚合、热点分片。必须说明中间件路由、预聚合、异步对账与迁移方案。","topic":"database","difficulty":"hard","type":"knowledge"}
+{"question":"缓存与数据库双写一致性怎么做？","answer":"常见策略：写库后删缓存（加延迟双删）或订阅 binlog 修正。应强调不存在银弹，要结合读写比和一致性等级。","topic":"database","difficulty":"medium","type":"theory"}
+{"question":"线上慢 SQL 处理流程是什么？","answer":"先止血（限流/降级）再定位（执行计划、索引、锁等待），最后做回归压测与复盘。","topic":"database","difficulty":"medium","type":"knowledge"}
+{"question":"数据库面试评分卡。","answer":"评分维度：原理理解30、SQL/索引实践25、一致性与事务20、故障经验15、表达与取舍10。可用于自动生成结构化反馈。","topic":"database","difficulty":"medium","type":"rubric"}

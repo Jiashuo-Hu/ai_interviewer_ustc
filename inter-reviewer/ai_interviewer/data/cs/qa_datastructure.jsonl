@@ -1,0 +1,8 @@
+﻿{"question":"数组、链表、跳表分别适用于什么场景？","answer":"数组适合随机读和缓存友好；链表适合频繁插删；跳表适合有序键值与范围查询。追问应落到读写比例、内存局部性、并发实现难度。","topic":"datastructure","difficulty":"easy","type":"theory"}
+{"question":"LRU 与 LFU 的工程取舍是什么？","answer":"LRU 实现简单、抗短期热点弱；LFU 对长期热点友好、实现复杂。要求候选人给具体业务例子（资讯流/推荐流）说明选择依据。","topic":"datastructure","difficulty":"medium","type":"theory"}
+{"question":"并查集为什么近似 O(1)？","answer":"考点：路径压缩+按秩合并，均摊复杂度 O(alpha(n))。追问：为什么不能删除边？若需回滚并查集怎么做？","topic":"datastructure","difficulty":"medium","type":"theory"}
+{"question":"线段树与树状数组如何选？","answer":"树状数组适合前缀可逆运算、实现轻；线段树支持更复杂区间操作（最值、懒标记）。必须比较空间、实现复杂度、常数项。","topic":"datastructure","difficulty":"medium","type":"theory"}
+{"question":"Trie 在中文场景会遇到什么问题？","answer":"编码归一化、内存膨胀、同义词与错别字。追问：如何做压缩 Trie 或双数组 Trie 降内存。","topic":"datastructure","difficulty":"hard","type":"knowledge"}
+{"question":"Bloom Filter 的误判率如何估算与调参？","answer":"误判率与位图大小 m、哈希函数个数 k、元素数 n 相关。应说明有假阳性、无假阴性。追问：删除需求出现时为何用 Counting Bloom。","topic":"datastructure","difficulty":"hard","type":"theory"}
+{"question":"单调栈题如何快速识别？","answer":"当问题是下一个更大/更小或可见区间边界时优先考虑单调栈。要求候选人说明栈内元素保持的单调不变量。","topic":"datastructure","difficulty":"medium","type":"knowledge"}
+{"question":"为什么哈希表在极端输入会退化？","answer":"冲突集中会导致链长变大或探测变长。工程上要讲：随机种子、rehash 策略、负载因子阈值。","topic":"datastructure","difficulty":"medium","type":"theory"}

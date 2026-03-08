@@ -1,0 +1,8 @@
+﻿{"question":"设计短链系统时，最先明确的四个容量问题是什么？","answer":"QPS 峰值、存量规模、写读比、热点分布。没有容量假设的系统设计一律判为不完整。","topic":"system-design","difficulty":"medium","type":"design"}
+{"question":"Feed 流系统写扩散和读扩散如何取舍？","answer":"明星大V场景偏读扩散，普通社交可写扩散；常见是混合策略。要求候选人给出推拉结合与回补机制。","topic":"system-design","difficulty":"hard","type":"design"}
+{"question":"库存系统如何防超卖并兼顾吞吐？","answer":"常见方案：预扣库存+异步确认，或乐观锁重试+排队。必须覆盖补偿、取消订单回补、热点商品限流。","topic":"system-design","difficulty":"hard","type":"design"}
+{"question":"如何设计统一 ID 生成服务？","answer":"要点：高可用、趋势递增、去中心化扩展、时钟回拨防护。应比较雪花、号段、数据库自增代理方案。","topic":"system-design","difficulty":"medium","type":"design"}
+{"question":"实时推送系统（WebSocket）最容易忽略什么？","answer":"连接生命周期管理、心跳与断线重连、消息有序与去重、在线状态一致性。追问：跨机房会话迁移怎么做。","topic":"system-design","difficulty":"hard","type":"design"}
+{"question":"多活架构中冲突数据如何处理？","answer":"冲突检测（版本向量/时间戳）+合并策略（LWW/业务规则）+对账补偿。要求说明哪些字段可自动合并，哪些必须人工介入。","topic":"system-design","difficulty":"hard","type":"design"}
+{"question":"设计面试评分卡（系统设计专用）。","answer":"评分维度：需求澄清20、容量估算20、核心架构25、一致性与容灾15、监控与运维10、trade-off 表达10。用于模型稳定输出评价。","topic":"system-design","difficulty":"medium","type":"rubric"}
+{"question":"为什么系统设计必须先讲非功能需求？","answer":"因为可用性、延迟、一致性、成本直接决定技术选型边界。跳过该步骤会导致看起来完整但不可落地。","topic":"system-design","difficulty":"medium","type":"knowledge"}

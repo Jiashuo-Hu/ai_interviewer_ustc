@@ -1,0 +1,6 @@
+﻿{"question":"TCP 三次握手与四次挥手各解决什么问题？","answer":"握手用于能力与序列号同步；挥手用于双向半关闭。要求候选人解释 TIME_WAIT 的作用与代价。","topic":"network","difficulty":"easy","type":"theory"}
+{"question":"为什么 HTTP/3 要基于 QUIC 而不是继续优化 TCP？","answer":"核心是消除传输层队头阻塞、缩短握手、连接迁移能力。追问：0-RTT 的重放风险如何防护。","topic":"network","difficulty":"hard","type":"theory"}
+{"question":"BGP 收敛慢的工程影响与优化方向。","answer":"影响跨地域可用性恢复；优化包括路由聚合、抑制 flap、策略简化与监控告警。","topic":"network","difficulty":"hard","type":"knowledge"}
+{"question":"CDN 命中率低时你会从哪些维度排查？","answer":"缓存键设计、TTL、回源策略、热点分布、版本策略。要求候选人能给可观测指标与实验方案。","topic":"network","difficulty":"medium","type":"knowledge"}
+{"question":"零信任网络的最小落地单元是什么？","answer":"身份、设备态、策略、持续校验四件套。不要只回答 VPN。","topic":"network","difficulty":"medium","type":"theory"}
+{"question":"网络排障面试常用证据链。","answer":"从客户端到边缘到网关到服务，结合抓包、RTT、重传率、错误码与日志时间线形成闭环证据。","topic":"network","difficulty":"medium","type":"rubric"}
